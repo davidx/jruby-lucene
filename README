@@ -4,7 +4,8 @@
 
 == DESCRIPTION:
 
-A jruby wrapper for lucene. Packaged after initial blog post by Mark Watson here : http://markwatson.com/blog/2007/06/using-lucene-with-jruby.html
+A jruby wrapper for lucene. Packaged after initial blog post by Mark Watson,
+here : http://markwatson.com/blog/2007/06/using-lucene-with-jruby.html
 
 == FEATURES/PROBLEMS:
 
