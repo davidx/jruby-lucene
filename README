@@ -4,7 +4,7 @@
 
 == DESCRIPTION:
 
-A jruby wrapper for lucene.
+A jruby wrapper for lucene. Packaged after initial blog post by Mark Watson here : http://markwatson.com/blog/2007/06/using-lucene-with-jruby.html
 
 == FEATURES/PROBLEMS:
 
@@ -17,12 +17,18 @@ require 'jruby/lucene'
  
 lucene = Lucene.new
 
-* Search:
-	result = lucene.search("testing 123")
-* Add documents
-	lucene.add_documents(id_text_pair_array) # e.g., [[1,"test1"],[2,'test2']]
-* Delete documents
-	lucene.delete_documents(id_array) # e.g., [1,5,88]
+# search
+
+result = lucene.search("testing 123")
+p result.inspect
+
+# add documents
+
+lucene.add_documents(id_text_pair_array) # e.g., [[1,"test1"],[2,'test2']]
+
+* delete documents
+
+lucene.delete_documents(id_array) # e.g., [1,5,88]
 
 == REQUIREMENTS:
 

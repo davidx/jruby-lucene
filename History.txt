@@ -1,6 +1,4 @@
-=== 1.0.0 / 2008-07-23
+=== 1.0.3 / 2008-07-23
 
-* 1 major enhancement
-
-  * Birthday!
+* initial commit
 
