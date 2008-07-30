@@ -1,0 +1,9 @@
+./build/jruby-lucene.gemspec
+./ext/LICENSE.txt
+./ext/lucene-core-2.3.2.jar
+./History.txt
+./lib/jruby/lucene.rb
+./Manifest.txt
+./Rakefile
+./README
+./test/test_all.rb
