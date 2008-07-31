@@ -15,8 +15,8 @@ here : http://markwatson.com/blog/2007/06/using-lucene-with-jruby.html
 
 require 'rubygems'
 require 'jruby/lucene'
- 
-lucene = Lucene.new
+
+lucene = Lucene.new(INDEX_PATH='./data')
 
 # search
 

@@ -27,6 +27,7 @@ class TestLucene < Test::Unit::TestCase
     assert File.directory?( INDEXPATH )
     assert_not_nil writer
     assert_kind_of IndexWriter, writer
+    writer.close
     remove_index
   end
 
@@ -47,10 +48,15 @@ class TestLucene < Test::Unit::TestCase
     result = l.search("foo")
     assert result.kind_of?( Array ), result.inspect
     assert result.length == 0
-    l.add_documents([[23, "foo bar"]])
-    result = l.search("foo")
+    l.add_documents(DATA)
+    query="another"
+    result = l.search(query)
     assert result.kind_of?( Array ), result.inspect
     assert result.length > 0
+    # [0.625, 2, "this is another test"]
+    score = result[0].shift
+    assert_equal DATA[1], result[0]
+
   end
   def test_delete_documents
     remove_index
