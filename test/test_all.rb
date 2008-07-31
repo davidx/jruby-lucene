@@ -11,7 +11,7 @@ class IndexReader < org.apache.lucene.index.IndexReader; end
 class StandardAnalyzer < org.apache.lucene.analysis.standard.StandardAnalyzer; end
 
 class TestLucene < Test::Unit::TestCase
-  INDEXPATH  = './data/0'
+  INDEXPATH  = File.dirname(__FILE__) + '/data/0'
   DATA=[[1, "this is a test"], [2, "this is another test"]]
   def test_create_index
     FileUtils.rm_rf( INDEXPATH )
@@ -79,7 +79,9 @@ class TestLucene < Test::Unit::TestCase
     assert_not_nil result
     assert_kind_of Array, result
     assert result.length > 0
-    assert_equal 9, result[0][1]
+    score = result[0].shift
+    assert_equal 9, result[0][0]
+    assert_equal "this is yet another test", result[0][1]
   end
   private
  def create_index(path=INDEXPATH)
