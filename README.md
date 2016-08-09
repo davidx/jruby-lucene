@@ -12,21 +12,23 @@ here : http://markwatson.com/blog/2007/06/using-lucene-with-jruby.html
 * Currently a basic prototype only
 
 ## SYNOPSIS:
-
+```ruby
 require 'rubygems'
+
 require 'jruby/lucene'
 
 lucene = Lucene.new(INDEX_PATH='./data')
-
+```
 # search
+```ruby
 
 result = lucene.search("testing 123")
 p result.inspect
-
+```
 # add documents
-
+```ruby
 lucene.add_documents(id_text_pair_array) # e.g., [[1,"test1"],[2,'test2']]
-
+```
 * delete documents
 
 lucene.delete_documents(id_array) # e.g., [1,5,88]
