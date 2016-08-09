@@ -30,9 +30,9 @@ p result.inspect
 lucene.add_documents(id_text_pair_array) # e.g., [[1,"test1"],[2,'test2']]
 ```
 * delete documents
-
+```ruby
 lucene.delete_documents(id_array) # e.g., [1,5,88]
-
+```
 == REQUIREMENTS:
 
 * simple wrapper jruby lucene demonstration
