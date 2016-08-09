@@ -1,17 +1,17 @@
-= jruby-lucene
+# jruby-lucene
 
 * http://github.com/davidx/jruby-lucene/tree
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 A jruby wrapper for lucene. Packaged after initial blog post by Mark Watson,
 here : http://markwatson.com/blog/2007/06/using-lucene-with-jruby.html
 
-== FEATURES/PROBLEMS:
+## FEATURES/PROBLEMS:
 
 * Currently a basic prototype only
 
-== SYNOPSIS:
+## SYNOPSIS:
 
 require 'rubygems'
 require 'jruby/lucene'
@@ -35,12 +35,12 @@ lucene.delete_documents(id_array) # e.g., [1,5,88]
 
 * simple wrapper jruby lucene demonstration
 
-== INSTALL:
+## INSTALL:
 
  /usr/local/jruby/bin/rake build
  /usr/local/jruby/bin/gem install jruby-lucene
 
-== LICENSE:
+## LICENSE:
 
 (The MIT License)
 
